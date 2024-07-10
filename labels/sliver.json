@@ -1,0 +1,37 @@
+{
+    "frameworkName": "Sliver",
+    "data": [
+        {
+            "ID": 0,
+            "filename": "data/sessions/mtls/session_mtls_listener_down.pcap",
+            "connectionType": "session",
+            "protocol": "mtls",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 1,
+            "filename": "data/sessions/mtls/session_mtls_open-after_then_close.pcap",
+            "connectionType": "session",
+            "protocol": "mtls",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 2,
+            "filename": "data/sessions/mtls/session_mtls_open_before_and_stay_open.pcap",
+            "connectionType": "session",
+            "protocol": "mtls",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 3,
+            "filename": "data/sessions/mtls/session_mtls_open_before_and_then_close.pcap",
+            "connectionType": "session",
+            "protocol": "mtls",
+            "stager": 0,
+            "custom": 0
+        }
+    ]
+}
