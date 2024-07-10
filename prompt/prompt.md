@@ -7,8 +7,27 @@ You are a group of three experts discussing.
 
 ## Tasks
 You task is to detect pattern in the given data file by reading the label file
-label.json and link it to the unzipped files in data.zip
-These file contains netflow from infected device by a Sliver C2 framework.
+labels/*.json and link it to the unzipped files in data.zip
+
+The labels are represented as follow
+```
+{
+    "frameworkName": <frameworkName>, // SAFE for safe device examples
+    "data": [
+        {
+             "ID": 0 // the id of the data object for this specific framework
+            "filename": "data/sessions/mtls/session_mtls_listener_down.pcap", // the file path to find the associated pcap file
+            "connectionType": "session", // the connection type represented. None for safe device examples
+            "protocol": "mtls", // the protocol used. None for safe device examples
+            "stager": 0, // 0 not use stager, 1 use stager
+            "custom": 0 // 0 basic implant, 1 custom implant
+        },
+        ...
+    ]
+}
+```
+Each file in data.zip has its data object in the data list above.
+These file contains netflow from infected device by a Sliver C2 framework or netflow from safe device (check associated label to know if the file represent a safe example or an infected one).
 
 If the use
 
