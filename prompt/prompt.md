@@ -40,7 +40,21 @@ replacing
 - \<probability\> by the probability to be safe you compute from the data and provided file look alike
 
 ## Constraints
-None for now
+While reading pcap file, take in account for each packet
+- source IP
+- destination IP
+- port
+- service
+- protocol used
+    - flags if relevant
+    - if HTTP/S check url
+    - if DNS check url
+
+
+take into account globally
+- number of packets for a same connection
+
+Take only these features in account.
 
 
 
