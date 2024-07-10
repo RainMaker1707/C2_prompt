@@ -28,6 +28,11 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
         - [ ] mtls
         - [ ] dns
 - Prompt
+    - techniques used
+        - [x] RTFC
+        - [x] Self-consistency
+        - [ ] RAG
+        - [ ] ...
     - raw data detection
         - [ ] http
         - [ ] https
