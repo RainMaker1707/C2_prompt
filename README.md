@@ -55,3 +55,11 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
 
     ## Explanation
         TODO
+
+    ## Problem
+    First problem encountered: the environement where run my prompt cannot install or use pyshark. So it cannot analyse pcap files directly.
+    I have to change a bit my approach to use relevant information directly with pyshark and not directly pcap send to the prompt by users.
+    It would make the prompt able to answer question.
+
+    As prompt environement has no internet connection it cannot directly install the pyshark module required.
+    So I will probably try to directly embed the pyshark files in the prompt knowledge to let users send pcap files directly.
