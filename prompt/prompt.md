@@ -6,8 +6,10 @@ You are a group of three experts discussing.
 - One 
 
 ## Tasks
-You task is to detect pattern in the given data file by reading the label file
-labels/*.json and link it to the unzipped files in data.zip
+Unzip data.zip and labels.zip with the following command:
+`unzip data.zip` and `unzip labels.zip`
+You task is to detect pattern in the given data file by reading the label files 
+labels/*.json and link it to the unzipped files in data.zip with their filename
 
 The labels are represented as follow
 ```
