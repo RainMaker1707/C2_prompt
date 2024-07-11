@@ -107,3 +107,8 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
 
     As prompt environement has no internet connection it cannot directly install the pyshark module required.
     So I will probably try to directly embed the pyshark files in the prompt knowledge to let users send pcap files directly.
+
+    A basic extractor has been written in python but I struggle to use pyshark inside the environement of the GPT4 prompt.
+
+    ## Remarks
+    For now only non noisy data are available. Noisy data (low, medium and high noise) will be available soon.
