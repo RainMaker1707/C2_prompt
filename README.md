@@ -21,12 +21,16 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
         - [x] http
         - [x] https
         - [x] mtls
-        - [x] dns
-    - beacons 
-        - [ ] http
-        - [ ] https
-        - [ ] mtls
         - [ ] dns
+    - beacons 
+        - [x] http
+        - [x] https
+        - [x] mtls
+        - [ ] dns
+- Data transformation
+    - [x] basic extractor
+    - advanced techniques
+        - [ ] ...
 - Prompt
     - techniques used
         - [x] RTFC
@@ -55,8 +59,8 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
 ## Work done
 - Gather data for basic connection
     - sessions
-        - [ ] http
-        - [ ] https
+        - [x] http
+        - [x] https
         - [x] mtls
         - [ ] dns
     - beacons 
@@ -64,6 +68,10 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
         - [ ] https
         - [ ] mtls
         - [ ] dns
+- Data transformation
+    - [x] basic extractor
+    - advanced techniques
+        - [ ] ...
 - Prompt
     - techniques used
         - [ ] RTFC
