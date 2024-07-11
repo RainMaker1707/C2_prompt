@@ -7,7 +7,7 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
 ## Repository organisation
 
 ## Iterations
-- **I0** Prompt that uses raw pcap data to detect one or two types of sliver implant use
+- **I0** Prompt that uses raw pcap data to detect one or two types of sliver implant use (NOT POSSIBLE as the env cannot install pyshark, only binary comparisons are possible)
 - **I1** Prompt that uses raw pcap data to detect all types of basic connections with sliver implant
 - **I2** Prompt that uses pcap data transformation to detect all types of basic connections with sliver implant
 - **I3** Add detection of custom sliver implant (stagers for example)
