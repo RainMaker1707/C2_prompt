@@ -114,7 +114,7 @@ Update for this part will come soon.
 
     **A basic extractor has been written in python but I struggle to use pyshark inside the environement of the GPT4 prompt.**
 
-    ## Remarks to not
+    ## Remarks to note
     - For now only non noisy data are available. Noisy data (low, medium and high noise) will be available soon.
     - For the first part example data focus on sessions. Beacons data will be available soon.
     - DNS seems to not connect in sessions mode.
