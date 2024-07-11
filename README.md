@@ -15,13 +15,13 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
 - ...
 
 
-## Work done
+## Current work
 - Gather data for basic connection
     - sessions
-        - [ ] http
-        - [ ] https
+        - [x] http
+        - [x] https
         - [x] mtls
-        - [ ] dns
+        - [x] dns
     - beacons 
         - [ ] http
         - [ ] https
@@ -52,6 +52,42 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
         - [ ] Yara
         - [ ] ...
 
+## Work done
+- Gather data for basic connection
+    - sessions
+        - [ ] http
+        - [ ] https
+        - [x] mtls
+        - [ ] dns
+    - beacons 
+        - [ ] http
+        - [ ] https
+        - [ ] mtls
+        - [ ] dns
+- Prompt
+    - techniques used
+        - [ ] RTFC
+        - [x] Self-consistency
+        - [ ] RAG
+        - [ ] ...
+    - raw data detection
+        - [ ] http
+        - [ ] https
+        - [ ] mtls
+        - [ ] dns
+    - transformed data detection
+        - [ ] http
+        - [ ] https
+        - [ ] mtls
+        - [ ] dns
+    - C2 framework detection
+        - [ ] Sliver
+        - [ ] Mythic
+        - [ ] ...
+    - Defense rules
+        - [ ] Snort
+        - [ ] Yara
+        - [ ] ...
 
     ## Explanation
         TODO
