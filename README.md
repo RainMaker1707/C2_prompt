@@ -18,10 +18,10 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
 ## Current work
 - Gather data for basic connection
     - sessions
-        - [ ] http
-        - [ ] https
+        - [x] http
+        - [x] https
         - [x] mtls
-        - [ ] dns
+        - [x] dns
     - beacons 
         - [ ] http
         - [ ] https
