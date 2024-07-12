@@ -170,8 +170,10 @@ Update for this part will come soon.
 # V2 tests
 ## FSM inside tasking
 
+```
 0 ----> 1 ----> 2 ----> 3 ----> 4 \
  \_____/                 \_____/    
+```
 
 - **The task 0 check the input when the input is converted it goes to the task 1.
 - **Task 1** check the format of the txt file if well formatted go to step 2, else goto step 0.
