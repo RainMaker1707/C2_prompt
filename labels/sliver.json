@@ -32,6 +32,80 @@
             "protocol": "mtls",
             "stager": 0,
             "custom": 0
+        },
+
+        {
+            "ID": 4,
+            "filename": "converted-data/sessions/http/session_http_on_before_screenshot_then_close.txt",
+            "connectionType": "session",
+            "protocol": "http",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 5,
+            "filename": "converted-data/sessions/http/session_mtls_on_before_play_shell_stay_open.txt",
+            "connectionType": "session",
+            "protocol": "http",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 6,
+            "filename": "converted-data/sessions/http/session_http_on_before_stay_open.txt",
+            "connectionType": "session",
+            "protocol": "http",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 7,
+            "filename": "converted-data/sessions/http/session_http_on_before_then_close.txt",
+            "connectionType": "session",
+            "protocol": "http",
+            "stager": 0,
+            "custom": 0
+        },
+
+        {
+            "ID": 8,
+            "filename": "converted-data/sessions/http/session_https_off_before_stay_open.txt",
+            "connectionType": "session",
+            "protocol": "https",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 9,
+            "filename": "converted-data/sessions/http/session_https_off_before_then_close.txt",
+            "connectionType": "session",
+            "protocol": "https",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 10,
+            "fileneme": "converted-data/sessions/http/session_https_on_before_screenshot_then_close.txt",
+            "connectionType": "session",
+            "protocol": "https",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 11,
+            "filename": "converted-data/sessions/http/session_https_on_before_stay_open.txt",
+            "connectionType": "session",
+            "protocol": "https",
+            "stager": 0,
+            "custom": 0
+        },
+        {
+            "ID": 12,
+            "filename": "converted-data/sessions/https/session_https_on_before_then_close.txt",
+            "connectionType": "session",
+            "protocol": "https",
+            "stager": 0,
+            "custom": 0
         }
     ]
 }
