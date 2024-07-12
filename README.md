@@ -152,6 +152,7 @@ Update for this part will come soon.
     ```
 
     Secondly the prompt give to much informations about how it proceeds to give the answer. I'll see to fix this later.
+    Thirdly the prompt keep to generate code to analyze text converted file instead of doing it by text only.
 
 
 
@@ -163,4 +164,21 @@ Update for this part will come soon.
     - The port 31337 (Elite) is only open when a multiplayer job is requested
     - Port used to handle job as DNS or HTTP are the official one (43, 80, ...)
     - When an idle HTTP or HTTPS connection is active, much TCP packet are exchanged.
+
+
+
+# V2 tests
+## FSM inside tasking
+
+0 ----> 1 ----> 2 ----> 3 ----> 4 
+ \____/                  \_____/    
+
+- **The task 0 check the input when the input is converted it goes to the task 1.
+- **Task 1** check the format of the txt file if well formatted go to step 2, else goto step 0.
+- **Task 2** performs examples analyzes. and then go to task 3.
+- **Task 3** performs an analyzes on the user converted file. Then goto task 4.
+- **Task 4** Generate an answer and save it.
+    - Then check if it has 7 answers. 
+        - If yes make majority vote and generate the final answer.
+        - If no go to task 3.
 
