@@ -171,7 +171,7 @@ Update for this part will come soon.
 ## FSM inside tasking
 
 ```
-0 ----> 1 ----> 2 ----> 3 ----> 4 \
+0 ----> 1 ----> 2 ----> 3 ----> 4
  \_____/                 \_____/    
 ```
 
