@@ -175,7 +175,7 @@ Update for this part will come soon.
  \_____/                 \_____/    
 ```
 
-- **The task 0 check the input when the input is converted it goes to the task 1.
+- **Task 0** check the input when the input is converted it goes to the task 1.
 - **Task 1** check the format of the txt file if well formatted go to step 2, else goto step 0.
 - **Task 2** performs examples analyzes. and then go to task 3.
 - **Task 3** performs an analyzes on the user converted file. Then goto task 4.
