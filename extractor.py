@@ -34,11 +34,10 @@ def extract_packet_info(packet):
 path = "./data/sessions"
 for dir in listdir(path):
     for file in listdir(path+"/"+dir):
-        with open("./converted-data/sessions/"+dir+"/"+file[0:-5]+"_txt_converted.txt", "w") as f:
+        with open("./converted-data/sessions/"+dir+"/"+file[0:-5]+".txt", "w") as f:
             for packet in pyshark.FileCapture("./"+path+"/"+dir+"/"+file):
                 f.write(str(packet))
                 f.write("-"*17+"\n"+"-"*17)
-            f.close()
 
 # for packet in capture:
 #     print(packet)

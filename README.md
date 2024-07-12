@@ -37,9 +37,9 @@ Update for this part will come soon.
         - [x] mtls
         - [ ] dns
     - beacons 
-        - [x] http
-        - [x] https
-        - [x] mtls
+        - [ ] http
+        - [ ] https
+        - [ ] mtls
         - [ ] dns
 - Data transformation
     - [x] basic extractor
@@ -104,6 +104,9 @@ Update for this part will come soon.
     ## Explanation
         TODO
 
+    ## Label template
+        TODO
+
     ## Problem
     First problem encountered: the environement where run my prompt cannot install or use pyshark. So it cannot analyse pcap files directly.
     I have to change a bit my approach to use relevant information directly with pyshark and not directly pcap send to the prompt by users.
@@ -121,4 +124,4 @@ Update for this part will come soon.
     - The port 31337 (Elite) is only open when a multiplayer job is requested
     - Port used to handle job as DNS or HTTP are the official one (43, 80, ...)
     - When an idle HTTP or HTTPS connection is active, much TCP packet are exchanged.
-    
+
