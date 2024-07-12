@@ -7,7 +7,7 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
 This project aims to develop a GPT4 prompt able to detect automatically from pcap files the infection of a C2 framework.
 The three first parts focus on the SLiver C2 framework.
 
-- [ ] The first part is to develop a basic prompt that can use raw data in pcap file by generating data and use only RTF and self-consistency
+- [x] The first part is to develop a basic prompt that can use raw data in pcap file by generating data and use only RTF and self-consistency
     - Update which is not possible, only binary comparisons are possible and it is not really what we want here
 - [ ] The second part will be to develop a feature extractor and extract these data from all data files generated
 - [ ] The third part will be to apply more prompt techniques to the actual prompt
@@ -37,9 +37,9 @@ Update for this part will come soon.
         - [x] mtls
         - [ ] dns
     - beacons 
-        - [ ] http
-        - [ ] https
-        - [ ] mtls
+        - [x] http
+        - [x] https
+        - [x] mtls
         - [ ] dns
 - Data transformation
     - [x] basic extractor
@@ -49,15 +49,11 @@ Update for this part will come soon.
     - techniques used
         - [x] RTFC
         - [x] Self-consistency
+        - [x] ReACT
         - [ ] RAG
         - [ ] ...
-    - transformed data detection
-        - [ ] http
-        - [ ] https
-        - [ ] mtls
-        - [ ] dns
     - C2 framework detection
-        - [ ] Sliver
+        - [x] Sliver
         - [ ] Mythic
         - [ ] ...
     - Defense rules
@@ -83,15 +79,11 @@ Update for this part will come soon.
         - [ ] ...
 - Prompt
     - techniques used
-        - [ ] RTFC
+        - [x] RTFC
         - [x] Self-consistency
+        - [ ] ReACT
         - [ ] RAG
         - [ ] ...
-    - transformed data detection
-        - [ ] http
-        - [ ] https
-        - [ ] mtls
-        - [ ] dns
     - C2 framework detection
         - [ ] Sliver
         - [ ] Mythic
@@ -105,7 +97,38 @@ Update for this part will come soon.
         TODO
 
     ## Label template
-        TODO
+        Each framework has its json file(s) labelling the examples related.
+        json files format:
+        ```json
+        {
+            "frameworkName": "Sliver",
+            "data": [
+                {
+                    "ID": random id,
+                    "filename": filepath
+                    "connectionType": <connection used> (session or beacon for sliver) 
+                    "protocol": <protocol used>
+                    "stager": <0 false 1 true (true if stager used)>
+                    "custom": <0 false 1 true (true if custom used)>
+                },
+                {
+                    "ID": 1,
+                    "filename": "converted-data/sessions/mtls/session_mtls_open-after_then_close.txt",
+                    "connectionType": "session",
+                    "protocol": "mtls",
+                    "stager": 0,
+                    "custom": 0
+                },
+                ...
+            ]
+        }
+        ```
+
+        Each file related has its data object in a json file.
+
+
+
+
 
     ## Problem
     First problem encountered: the environement where run my prompt cannot install or use pyshark. So it cannot analyse pcap files directly.
@@ -116,6 +139,22 @@ Update for this part will come soon.
     So I will probably try to directly embed the pyshark files in the prompt knowledge to let users send pcap files directly.
 
     **A basic extractor has been written in python but I struggle to use pyshark inside the environement of the GPT4 prompt.**
+    For now the prompt will provide a basic pcap to txt python extractor. User will have to run it locally and then provides the converted file to GPT.
+    ```python
+    import pyshark
+
+    filepath = "file/to/your/file"
+
+    with open(filepath, "w") as f:
+        for packet in pyshark.FileCapture(filepath[0:-5] + ".txt"):
+            f.write(str(packet))
+            f.write("-"*17+"\n"+"-"*17) # Packet separation (not really helps the LLM but improves human readability)
+    ```
+
+    Secondly the prompt give to much informations about how it proceeds to give the answer. I'll see to fix this later.
+
+
+
 
     ## Remarks to note
     - For now only non noisy data are available. Noisy data (low, medium and high noise) will be available soon.
