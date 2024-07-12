@@ -3,7 +3,7 @@
     "data": [
         {
             "ID": 0,
-            "filename": "data/sessions/mtls/session_mtls_listener_down.pcap",
+            "filename": "converted-data/sessions/mtls/session_mtls_listener_down.txt",
             "connectionType": "session",
             "protocol": "mtls",
             "stager": 0,
@@ -11,7 +11,7 @@
         },
         {
             "ID": 1,
-            "filename": "data/sessions/mtls/session_mtls_open-after_then_close.pcap",
+            "filename": "converted-data/sessions/mtls/session_mtls_open-after_then_close.txt",
             "connectionType": "session",
             "protocol": "mtls",
             "stager": 0,
@@ -19,7 +19,7 @@
         },
         {
             "ID": 2,
-            "filename": "data/sessions/mtls/session_mtls_open_before_and_stay_open.pcap",
+            "filename": "converted-data/sessions/mtls/session_mtls_open_before_and_stay_open.txt",
             "connectionType": "session",
             "protocol": "mtls",
             "stager": 0,
@@ -27,7 +27,7 @@
         },
         {
             "ID": 3,
-            "filename": "data/sessions/mtls/session_mtls_open_before_and_then_close.pcap",
+            "filename": "converted-data/sessions/mtls/session_mtls_open_before_and_then_close.txt",
             "connectionType": "session",
             "protocol": "mtls",
             "stager": 0,
