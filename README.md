@@ -70,9 +70,9 @@ Update for this part will come soon.
         - [x] mtls
         - [ ] dns
     - beacons 
-        - [ ] http
-        - [ ] https
-        - [ ] mtls
+        - [x] http
+        - [x] https
+        - [x] mtls
         - [ ] dns
 - Data transformation
     - [x] basic extractor
@@ -162,9 +162,9 @@ Update for this part will come soon.
     ## Remarks to note
     - For now only non noisy data are available. Noisy data (low, medium and high noise) will be available soon.
     - For the first part example data focus on sessions. Beacons data will be available soon.
-    - DNS seems to not connect in sessions mode.
+    - DNS seems to not connect in sessions mode. __*Update:*__ on beacon mode it doesn't seem to work too.
     - The port 31337 (Elite) is only open when a multiplayer job is requested
-    - Port used to handle job as DNS or HTTP are the official one (43, 80, ...)
+    - Port used to handle job as DNS or HTTP are the official one (53, 80, 443, ...)
     - When an idle HTTP or HTTPS connection is active, much TCP packet are exchanged.
 
 
