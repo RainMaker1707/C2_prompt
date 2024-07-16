@@ -43,13 +43,14 @@ Update for this part will come soon.
         - [ ] dns
 - Data transformation
     - [x] basic extractor
+    - [x] wireshark converter
     - advanced techniques
         - [ ] ...
 - Prompt
     - techniques used
         - [x] RTFC
         - [x] Self-consistency
-        - [x] ReACT
+        - [x] Prompt Chaining
         - [ ] RAG
         - [ ] ...
     - C2 framework detection
@@ -75,13 +76,14 @@ Update for this part will come soon.
         - [ ] dns
 - Data transformation
     - [x] basic extractor
+    - [ ] wireshark converter
     - advanced techniques
         - [ ] ...
 - Prompt
     - techniques used
         - [x] RTFC
         - [x] Self-consistency
-        - [ ] ReACT
+        - [x] Prompt Chaining
         - [ ] RAG
         - [ ] ...
     - C2 framework detection
