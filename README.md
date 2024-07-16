@@ -26,11 +26,16 @@ Update for this part will come soon.
 ## Repository organisation
 
 ## Iterations
-- **I0** Prompt that uses raw pcap data to detect one or two types of sliver implant use (NOT POSSIBLE as the env cannot install pyshark, only binary comparisons are possible)
+- **I0** Prompt that uses raw pcap data to detect one or two types of sliver implant use 
+    (NOT POSSIBLE as the env cannot install pyshark, only binary comparisons are possible)
 - **I1** Prompt that uses raw pcap data to detect all types of basic connections with sliver implant
+    (As the I0 using raw data is too limitating, you only can do binary comparison which is not what we want here)
 - **I2** Prompt that uses pcap data transformation to detect all types of basic connections with sliver implant
+    We are here and now the prompt use packet dissection as plain text.
 - **I3** Add detection of custom sliver implant (stagers for example)
-- **I4** Add basic connection of others C2 frameworks (as mythic for example)
+- **I4** Add defense rules creation 
+    Will need new knowledge, new sub task, improved prompt ...
+- **I5** Add basic connection of others C2 frameworks (as mythic for example)
 - ...
 
 
