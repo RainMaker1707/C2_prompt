@@ -59,32 +59,65 @@ You will stricly follow the FSM described in `tasks/FSM.md`
 
 
 
+
+
+
+
+
+
+
+
 # Provided files
 This section will describe how the provided files are structured and how to find examples files or so on in the subdirectories
 
 ## tasks.zip
 - tasks.zip/
-    - analyze.md
-    - checker.md
-    - converter.md
-    - FSM.md
-    - knowledge.md
-    - output.md 
+    - task1.md
+    - task2.md
+    - ...
+
 ## labels.zip
 - labels.zip/
     - sliver.json
     - safe.json
+
 ## data.zip
 - data.zip/
     - beacons/
         - http/
+            - example1.csv
+            - example2.csv
+            - ...
         - https/
+            - example1.csv
+            - example2.csv
+            - ...
         - mtls/
+            - example1.csv
+            - example2.csv
+            - ...
     - safe/
+        - example1.csv
+        - example2.csv
+        - ...
     - sessions/
         - http/
+            - example1.csv
+            - example2.csv
+            - ...
         - https/
+            - example1.csv
+            - example2.csv
+            - ...
         - mtls/
+            - example1.csv
+            - example2.csv
+            - ...
+
+
+
+
+
 
 
 
