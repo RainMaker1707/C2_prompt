@@ -3,13 +3,14 @@ This repository contains documents, scripts and textual prompt to make a GPT4 pr
 
 
 ## Today
+- Gather and forge more data
+- Improve user file analyzes.\
 - Works on prompt V3 which will use csv packets dissection from wireshark.
 
 
 ## TODO
 - PromptV3.1 using plain text packets dissection from wireshark.\
 - Compare the prompt V3 and V3.1 to understand how data format affect the prompt result.\
-- Improve user file analyzes.\
 - Reverse engineer some detection prompt already made to understand the prompt logic implemented.
 
 
