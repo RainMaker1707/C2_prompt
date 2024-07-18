@@ -1,16 +1,16 @@
 # C2_prompt
 This repository contains documents, scripts and textual prompt to make a GPT4 prompt able to detect C2 frameworks infection and provide appropriate defense rules against this threat
 
+
 ## Today
-Labelize new files (beacons / safe).
-Works on prompt V3 which will use csv packets dissection from wireshark.
+- Works on prompt V3 which will use csv packets dissection from wireshark.
 
 
 ## TODO
-PromptV3.1 using plain text packets dissection from wireshark.\
-Compare the prompt V3 and V3.1 to understand how data format affect the prompt result.\
-Improve user file analyzes.\
-Reverse engineer some detection prompt already made to understand the prompt logic implemented.
+- PromptV3.1 using plain text packets dissection from wireshark.\
+- Compare the prompt V3 and V3.1 to understand how data format affect the prompt result.\
+- Improve user file analyzes.\
+- Reverse engineer some detection prompt already made to understand the prompt logic implemented.
 
 
 
@@ -58,17 +58,6 @@ Update for this part will come soon.
 
 
 ## Current work
-- Gather data for basic connection
-    - sessions
-        - [x] http
-        - [x] https
-        - [x] mtls
-        - [ ] dns
-    - beacons 
-        - [x] http
-        - [x] https
-        - [x] mtls
-        - [ ] dns
 - Data transformation
     - [x] basic extractor
     - [x] wireshark converter to csv
@@ -91,6 +80,11 @@ Update for this part will come soon.
         - [ ] Snort
         - [ ] Yara
         - [ ] ...
+    - Versions
+        - [x] 1: Raw data  ❌
+        - [x] 2: Use pyshark pcap to txt packet extractor ❌
+        - [x] 3: Using csv dissection 🦾
+        - [ ] 3.1: Using plain text dissection
 
 ## Work done
 - Gather data for basic connection
@@ -126,6 +120,11 @@ Update for this part will come soon.
         - [ ] Snort
         - [ ] Yara
         - [ ] ...
+    - Versions
+        - [x] 1: Raw data  ❌
+        - [x] 2: Use pyshark pcap to txt packet extractor ❌
+        - [ ] 3: Using csv dissection 🦾
+        - [ ] 3.1: Using plain text dissection
 
 ## Explanation
 - For now the prompt is able to detect take as input a plain text wireshark packets dissection netflow and analyze it with its own code creation which is not optimal.
@@ -140,8 +139,8 @@ json files format:
         {
             "ID": random id,
             "filename": filepath
-            "connectionType": <connection used> (session or beacon for sliver) 
-            "protocol": <protocol used>
+            "connectionType": <connection used> (session or beacon for sliver, None for safe) 
+            "protocol": <protocol used> (None for safe)
             "stager": <0 false 1 true (true if stager used)>
             "custom": <0 false 1 true (true if custom used)>
         },
@@ -201,6 +200,8 @@ Thirdly the prompt keep to generate code to analyze text converted file instead 
 
 
 
+
+
 # V1
 Use raw pcap data.\
 As GPT4 can't read these data it simply doesn't work.\
@@ -231,4 +232,8 @@ Results were too inconsistent to be used.
 ## Why left this idea
 The idea was to use basic packet extractor which only write to text files the packet extraction from pyshark.\
 This was not really suitable as it is done mannually and can be time consumming to do it for several data.\
+
+
+# V3
+TODO
 
