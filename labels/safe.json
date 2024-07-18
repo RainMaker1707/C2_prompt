@@ -1,0 +1,13 @@
+{
+    "frameworkName": "safe",
+    "data": [
+        {
+            "ID": 0,
+            "filename": "data/safe/safe_dl.csv",
+            "connectionType": "None",
+            "protocol": "None",
+            "custom": 0,
+            "stager": 0
+        }
+    ]
+}
