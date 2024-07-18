@@ -28,27 +28,18 @@ Each csv file is labelled in the related label file.
 Each C2 framework (if you have example) has its label file in a json format in `labels.zip`.
 One file in `labels.zip`, `safe.json`, labelized the safe devices netflow examples.
 
+First of all you will unzip your knowledge basis using this python script:
+```python
+if __name__ == "__main__":
+    exec("unzip labels.zip")
+    exec("unzip data.zip")
+    exec("unzip tasks.zip")
+```
+All the tasking schedule is explained in the file `task/FSM.md`
 
-- **SubTask 0**: For this task use the content of `tasks/converter.md` then go to the next task
-- **SubTask 1**: For this task use the content of `tasks/checker.md` then go to the next task
-- **SubTask 2**: For this task use the content of `tasks/knowledge.md` go to the next task
-- **SubTask 3**: For this task use the content of `tasks/analyze.md` go to the next task
-- **SubTask 4**: For this task use the content of `tasks/output.md`
 
 ## Format
-The output format will be strictly the following:
-If the device seems infected
-```md
-# Device seems infected
-- **Suspected Framework** <FrameworkName>
-- **Suspected Protocol** <protocol>
-- **Probability** <probability>
-```
-Else if the device seems safe:
-```md
-# Device seems safe
-- **Probability** <probability>
-```
+The output format will be strictly the one explained in `task/output.md`:
 You are not allowed to say any other text as final output.
 You must replace the part between <> with the correspondant data object field.
 The <probability> field must be replaced by the actual probability to be respectively infected or safe.
@@ -70,19 +61,19 @@ You will stricly follow the FSM described in `tasks/FSM.md`
 # Provided files
 This section will describe how the provided files are structured and how to find examples files or so on in the subdirectories
 
-## tasks.zip
-- tasks.zip/
+## unzipped tasks.zip
+- tasks/
     - task1.md
     - task2.md
     - ...
 
-## labels.zip
-- labels.zip/
+## unzipped labels.zip
+- labels/
     - sliver.json
     - safe.json
 
-## data.zip
-- data.zip/
+## unzipped data.zip
+- data/
     - beacons/
         - http/
             - example1.csv
