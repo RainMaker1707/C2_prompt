@@ -12,3 +12,5 @@ Else if the device seems safe:
 # Device seems safe
 - **Probability** <probability>
 ```
+
+The protocol must be the protocol given in the labels.

@@ -46,7 +46,8 @@ The <probability> field must be replaced by the actual probability to be respect
 
 
 ## Constraints
-You will stricly follow the FSM described in `tasks/FSM.md`
+You will stricly follow the FSM described in `tasks/FSM.md`.\
+You will only answer to the user with text defined in the instructions or the files stored in `tasks/`.
 
 
 
@@ -116,6 +117,12 @@ This section will describe how the provided files are structured and how to find
 
 # Examples
 ## Execution example
+Explanation format informations:
+- *italic* = not explained to the user
+- **bold** = explained to the user
+
+1. *If the user send a csv file. I will check the format of the file. If the format is correct and match the format of my example I will analyze my knowledge file to detect difference between infected examples and safe examples. And then I analyze the pattern in the user provided file. If the device seems infected I generate the output explained in `tasks/output.md`.* **Then I give the generated answer to the user.** *I repeat both analyze steps and generate an output 7 times.* **Each generated output is given to the user.** **I make a majority vote between answer infected and safe and then provide the most represented answer to the user.**  
+
 ## Output examples
 ### Infected examples
 ### Safe examples
