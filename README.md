@@ -138,12 +138,12 @@ json files format:
     "frameworkName": "Sliver",
     "data": [
         {
-            "ID": random id,
-            "filename": filepath
-            "connectionType": <connection used> (session or beacon for sliver, None for safe) 
-            "protocol": <protocol used> (None for safe)
-            "stager": <0 false 1 true (true if stager used)>
-            "custom": <0 false 1 true (true if custom used)>
+            "ID": "<random id>",
+            "filename": "<filepath>"
+            "connectionType": "<connection used> (session or beacon for sliver, None for safe)" 
+            "protocol": "<protocol used> (None for safe)"
+            "stager": "<0 false 1 true (true if stager used)>"
+            "custom": "<0 false 1 true (true if custom used)>"
         },
         {
             "ID": 1,
