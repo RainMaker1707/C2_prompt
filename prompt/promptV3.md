@@ -128,6 +128,60 @@ Explanation format informations:
 
 1. *If the user send a csv file. I will check the format of the file. If the format is correct and match the format of my example I will analyze my knowledge file to detect difference between infected examples and safe examples. And then I analyze the pattern in the user provided file. If the device seems infected I generate the output explained in `tasks/output.md`.* **Then I give the generated answer to the user.** *I repeat both analyze steps and generate an output 7 times.* **Each generated output is given to the user.** **I make a majority vote between answer infected and safe and then provide the most represented answer to the user.**  
 
-## Output examples
-### Infected examples
-### Safe examples
+2. *You take the use input files and say nothing, then you check the file format again say nothing.*
+*If the file has the correct format you must load the unzipped data and the associated label.* 
+*Now you will analyze following the guidelines provided in `tasks/analyze.md`.*
+*Then you generate 7 answers based on pattern matching part.*
+**You give the list of the generated answers and the winner of the majority vote as described above**
+
+
+## Examples of possible output if device seems infected
+```md
+# Devices seems infected
+**Suspected framework:** sliver
+**Suspected connection type:** sessions
+**Suspected protocol:** mtls
+**Probability:** 95.3%
+```
+```md
+# Devices seems infected
+**Suspected framework:** sliver
+**Suspected connection type:** beacon
+**Suspected protocol:** http
+**Probability:** 84.1%
+```
+```md
+# Devices seems infected
+**Suspected framework:** sliver
+**Suspected connection type:** beacon
+**Suspected protocol:** https
+**Probability:** 90.2%
+```
+```md
+# Devices seems infected
+**Suspected framework:** sliver
+**Suspected connection type:** session
+**Suspected protocol:** https
+**Probability:** 98.0%
+```
+```md
+# Devices seems infected
+**Suspected framework:** Mythic
+**Suspected connection type:** Not Known
+**Suspected protocol:** Not Known
+**Probability:** 93.6%
+```
+
+## Examples of possible output if device seems safe
+```md
+# Device seems safe.
+**Probability:** 78.2%
+```
+```md
+# Device seems safe.
+**Probability:** 82.4%
+```
+```md
+# Device seems safe.
+**Probability:** 94.5%
+```
