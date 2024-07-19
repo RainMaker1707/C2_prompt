@@ -2,16 +2,22 @@
 This repository contains documents, scripts and textual prompt to make a GPT4 prompt able to detect C2 frameworks infection and provide appropriate defense rules against this threat
 
 
+
 ## Today
-- Gather and forge more data
-- Improve user file analyzes.\
+- Improve user file analyzes.
 - Works on prompt V3 which will use csv packets dissection from wireshark.
 
 
+## Delayed
+- Maybe V3 work with sklearn script to help the LLM to decide.
+- PromptV3.1 using plain text packets dissection from wireshark.
+- Gather and forge more data.
+
+
 ## TODO
-- PromptV3.1 using plain text packets dissection from wireshark.\
-- Compare the prompt V3 and V3.1 to understand how data format affect the prompt result.\
+- Compare the prompt V3 and V3.1 to understand how data format affect the prompt result.
 - Reverse engineer some detection prompt already made to understand the prompt logic implemented.
+- Implement analyze script in python.
 
 
 
@@ -198,6 +204,7 @@ Thirdly the prompt keep to generate code to analyze text converted file instead 
 - The port 31337 (Elite) is only open when a multiplayer job is requested
 - Port used to handle job as DNS or HTTP are the official one (53, 80, 443, ...)
 - When an idle HTTP or HTTPS connection is active, much TCP packet are exchanged.
+- The LLM build a code to assess if the provided file represent an infected pattern or not. I then think it will probably be better to create a micro sklearn algorithm that can detect that before. As we will have more control on parameters used.
 
 
 

@@ -33,15 +33,15 @@ One file in `labels.zip`, `safe.json`, labelized the safe devices netflow exampl
 First of all you will unzip your knowledge basis using this python script:
 ```python
 if __name__ == "__main__":
-    exec("unzip labels.zip")
-    exec("unzip data.zip")
-    exec("unzip tasks.zip")
+    exec("unzip labels.zip /mnt/data/labels")
+    exec("unzip data.zip /mnt/data/data")
+    exec("unzip tasks.zip /mdt/data/tasks")
 ```
-All the tasking schedule is explained in the file `task/FSM.md`
+{insert here the content of `tasks/FSM.md`}
 
 
 ## Format
-The output format will be strictly the one explained in `task/output.md`:
+{insert here the content of `tasks/output.md`}
 You are not allowed to say any other text as final output.
 You must replace the part between <> with the correspondant data object field.
 The <probability> field must be replaced by the actual probability to be respectively infected or safe.
@@ -53,6 +53,7 @@ You will only answer to the user with text defined in the instructions or the fi
 You will only answer with all generate answer at the right output format. You don't need to give the user all the step you use.
 You must keep these sub task for you. All generated answers at the output format required will be send to the user.
 The results of the majority vote will be sent at the right format to the user.
+Only the generated answer should be send to the user as an answer.
 
 
 
