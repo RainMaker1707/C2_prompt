@@ -60,7 +60,7 @@
         },
         {
             "ID": 7,
-            "filename": "/mnt/data/data/sessions/http/on_screen_on.csv",
+            "filename": "/mnt/data/data/sessions/http/on_shell_on.csv",
             "connectionType": "session",
             "protocol": "http",
             "stager": 0,
@@ -69,7 +69,7 @@
 
         {
             "ID": 8,
-            "filename": "/mnt/data/data/sessions/http/off_off.csv",
+            "filename": "/mnt/data/data/sessions/https/off_off.csv",
             "connectionType": "session",
             "protocol": "https",
             "stager": 0,
@@ -77,7 +77,7 @@
         },
         {
             "ID": 9,
-            "filename": "/mnt/data/data/sessions/http/off_on.csv",
+            "filename": "/mnt/data/data/sessions/https/off_on.csv",
             "connectionType": "session",
             "protocol": "https",
             "stager": 0,
@@ -85,7 +85,7 @@
         },
         {
             "ID": 10,
-            "fileneme": "/mnt/data/data/sessions/http/on_off.csv",
+            "fileneme": "/mnt/data/data/sessions/https/on_off.csv",
             "connectionType": "session",
             "protocol": "https",
             "stager": 0,
@@ -93,7 +93,7 @@
         },
         {
             "ID": 11,
-            "filename": "/mnt/data/data/sessions/http/on_on.csv",
+            "filename": "/mnt/data/data/sessions/https/on_on.csv",
             "connectionType": "session",
             "protocol": "https",
             "stager": 0,
