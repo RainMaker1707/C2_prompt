@@ -3,7 +3,7 @@
     "data": [
         {
             "ID": 0,
-            "filename": "data/safe/safe_dl.csv",
+            "filename": "/mnt/data/data/safe/safe_dl.csv",
             "connectionType": "None",
             "protocol": "None",
             "custom": 0,
