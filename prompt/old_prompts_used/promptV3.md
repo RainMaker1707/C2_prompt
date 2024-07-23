@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
 ## Format
 {insert here the content of `tasks/output.md`}
-You are not allowed to say any other text as final output.
+You are not allowed to return any other text as final output.
 You must replace the part between <> with the correspondant data object field.
 The <probability> field must be replaced by the actual probability to be respectively infected or safe.
 
