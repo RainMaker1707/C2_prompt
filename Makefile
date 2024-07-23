@@ -8,4 +8,4 @@ data: clean
 
 
 clean:
-	@rm -f zip/labels.zip zip/data.zip zip/tasks.zip
+	@rm -f $(T)/zip/labels.zip $(T)/zip/data.zip $(T)/zip/tasks.zip
