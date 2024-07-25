@@ -85,7 +85,7 @@
         },
         {
             "ID": 10,
-            "fileneme": "/mnt/data/data/sessions/https/on_off.csv",
+            "filename": "/mnt/data/data/sessions/https/on_off.csv",
             "connectionType": "session",
             "protocol": "https",
             "stager": 0,
