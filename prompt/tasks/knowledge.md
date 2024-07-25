@@ -27,3 +27,34 @@ In this extract lines or part of lines beginning with # are commentary for your 
 
 You must use these data objects to know if the file represent an infected example sor not.
 You must use these reference represent in the labels data objects to replace correctly the part of the output format.
+
+To get the filename associated to a data object you will use this python script:
+```python
+from os import listdir
+import json
+
+
+if __name__ == "__main__":
+    path = "/mnt/data/labels/"
+    file_list = []
+    for file in listdir(path):
+        with open(path+file, 'r') as file:
+            data = json.loads(file.read()).get("data")
+            for data_object in data:
+                file_list.append(data_object.get("filename"))
+    print(file_list)
+```
+
+To get content of csv files associated you must use this function:
+```python
+def getCSV(file_list):
+    # file_list parameter should be the same as created in the precedent script
+    final = dict()
+    for filepath in file_list:
+        with open(filepath, 'r') as file:
+            content = file.read()
+            # variable content contains the file content at this point
+            final[filepath] = content
+            # the dictionnary above will contains all contents. key <-> value == filepath <-> file-content
+    return final
+```
