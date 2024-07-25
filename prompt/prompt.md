@@ -63,8 +63,8 @@ Let's say you have 7 objects like these one to compare.
 # Device seems safe
 - **Probability** 67%
 ```
-The majority say it is infeced as their is 4 answers that say it is infected. The 4 answers have different protocol 3 of them are HTTP one is MTLS. The final probability is (79.3% + 71.7% + 89.7% + 66.4%)/4 = 76.8%
-From th e contraints described above the final output will be:
+The majority say it is infected as there is 4 answers that say it is infected. The 4 answers have different protocols. 3 of them are HTTP one is MTLS. The final probability is (79.3% + 71.7% + 89.7% + 66.4%)/4 = 76.8%
+From the constraints described above the final output will be:
 ```md
 # Device seems infected
 - **Suspected Framework** Sliver
