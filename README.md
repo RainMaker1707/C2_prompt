@@ -12,11 +12,12 @@ The old README is still available in this repository `oldREADME.md`.
 Feel free to open an issue or contact me in GitHub for more informations.
 
 
+
+
 # V0
 - No analyze explanation
-- Give good results on example data
-- Will be tested against data not on example set today.
-- No help menu, no
+- Give good results on example data (several HTTP sessions) and test data (one HTTP session)
+- No help menu
 
 This first usable version uses `Custom GPT4 assistant` and is available [here](https://chatgpt.com/g/g-LXj2lXggp-d2-a-c2-framework-detector).\
 This assistant uses verbosity features that can be specified with V= in your first message.\
@@ -24,6 +25,10 @@ It uses also an FSM like described in `prompt/tasks/FSM.md`.\
 
 As there is no analyze specified the LLM choose the most appropriate on its own to compute the result. This will be corrected soon.\
 Verbosity value may be ignored by the LLM, I don't know why for now.
+
+This version as been tested on HTTP session and it is the first version that detect an infection in not seen data.\
+This version seems to provide good results and consistency on Sliver HTTP session detection.
+
 
 
 
