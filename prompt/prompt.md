@@ -22,7 +22,7 @@ You role is to check the file I provided to detect if the device is infected by 
 
 
 # Majority vote and final output
-A majority vote is a process where you will compare answers in a certain way to decide which is the msot represented.
+A majority vote is a process where you will compare answers in a certain way to decide which is the most represented.
 You must firstly compare if the answer is infected or safe. Then if a majority of answers (4) represent infected then the final output will be infected. If the majority of answers (4) represent safe then the final output will be safe.
 In the case of infected only, You must do a second majority vote between protocols to choose the final one. 
 The final probability is the average of all probability of this answer represented in the forst majority vote (infected or safe).
