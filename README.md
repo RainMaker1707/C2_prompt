@@ -30,11 +30,24 @@ This version as been tested on HTTP session and it is the first version that det
 This version seems to provide good results and consistency on Sliver HTTP session detection.
 
 
+# V1 
+The next version will use 4 layers.
+1. **Machine Learning classifier:** Detect if the file represent safe or infected device.
+2. **Machine Learning classifier:** Detect the protocol used in case of infection.
+3. **Machine Learning classifier:** Provide efficient rulesto protect against the threat detected.
+4. **ChatGPT 4 answers:** Provide a human readable answer where it say the infection result and if needed the appropriate defense rules.
+
+For now I will work on the point 1, and eventually make a release where there will be only 2 layer (1 and 4).\
+This will be the v0.2.0-alpha.
+
+When this is working, I will make the layer 2 and add it in the release v0.2.1-alpha.
+
+Finally I will make the layer 3 that create defense rules for ONE framework as yara or snort (to define at the moment).
+Then the final release of this part will be the v1.0.0-prod
+
+For the next iteration (the V2), I will add other defense framework on the third layer to extend the defense possibility of this tools.
 
 
-
-# Next step
-- Go on the analyze part.
-- Gather and forge more data to feed examples.
-- Improve results.
+# Currently
+- V1 layer 1: ML classifier for infection detection.
 
