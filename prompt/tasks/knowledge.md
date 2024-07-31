@@ -58,3 +58,14 @@ def getCSV(file_list):
             # the dictionnary above will contains all contents. key <-> value == filepath <-> file-content
     return final
 ```
+
+
+# Some informations about Sliver
+
+- Sliver use dictionnaries to create url when it is connected with HTTP/S protocol.
+- Sliver use extensions described in the documentation page https://sliver.sh/docs?name=HTTPS+C2
+- Sliver create url with random parameter also explained in the documentation page https://sliver.sh/docs?name=HTTPS+C2
+
+# Some instructions about the knowledge step
+You must read carrefuly the sliver documentation in its totality before going to the next step. 
+And you must take this additionnal knowledge in account.

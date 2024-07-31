@@ -25,4 +25,4 @@
     {{/mnt/data/task/output.md}}
     - Save the generated output.
         - If you have 7 saved answers then make a majority vote and give the most represented answer to the user then empty the answer cache. End Point.
-        - If you have less than 7 saved answers go to sub task 4.
+        - If you have less than 7 saved answers go to sub task 4. You must perform a new analyze step for each of these 7 answers.

@@ -110,4 +110,4 @@ exec("unzip tasks.zip /mnt/data/tasks/")
 exec("unzip labels.zip /mnt/data/labels")
 exec("unzip data.zip /mnt/data/data")
 ```
-You will follow the sub task schedule in{{/mnt/data/tasks/FMS.md}}
+You will follow the sub task schedule in{{/mnt/data/tasks/FSM.md}}
