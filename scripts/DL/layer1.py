@@ -2,13 +2,16 @@ import argparse as arg
 from os import listdir
 import json
 import pandas as pd
-import tensorflow as tf
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.layers import Dense, Flatten
-from sklearn.model_selection import train_test_split
-
 import ipaddress
 import numpy as np
+
+
+import tensorflow as tf
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Flatten, LSTM, Masking
+from sklearn.model_selection import train_test_split
+
 
 
 # Global variable only for easier change
@@ -17,6 +20,7 @@ activ_fun = "softmax"
 losses = "categorical_crossentropy"
 protocols = {"HTTP": 0, "HTTPS":1, "DNS": 2, "MTLS": 3, "TCP": 4, "TLS": 5, "TLSv1.3": 6, "MDNS": 7}
 next_int = 8
+max_len = 0
 
 
 # It is obviously an ugly converted that need to be changed
@@ -105,13 +109,18 @@ def preprocess(args):
     x, y = labelize_data(data, labels)
     max_len = max(len(seq) for seq in x)
     padded_x = pad_sequences(x, maxlen=max_len, padding='post', dtype='float32')
-    return train_test_split(x, y, test_size=0.2, random_state=42)
+    return train_test_split(padded_x, y, test_size=0.2, random_state=42)
 
 
 def config():
-    tf.config.set_visible_devices([], "GPU") # No GPU on my laptop
-    
-    return None
+    tf.config.set_visible_devices([], "GPU") # No GPU in my laptop
+    model = Sequential()
+    model.add(Masking(mask_value=0.0, input_shape=(x_train.shape[1], x_train.shape[2])))
+    model.add(LSTM(64, return_sequences=False))
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(1, activation='sigmoid'))
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    return model
 
 
 if __name__ == "__main__":
@@ -124,9 +133,16 @@ if __name__ == "__main__":
 
     # from here both paths are needed otherwise the program throw an error.
     x_train, x_test, y_train, y_test  = preprocess(args)
+    x_train = np.array(x_train)
+    x_test = np.array(x_test)
+    y_train = np.array(y_train)
+    y_test = np.array(y_test)
+    
     model = config()
+    model.fit(x_train, y_train, epochs=100, batch_size=32)    
     
-    
+    loss, acc = model.evaluate(x_test, y_test)
+
     model.save_weights("/home/rainmaker/Desktop/C2_prompt/model/layer1.weights.h5")
-    print("All ok")
+    print(f'Accuracy: {acc},  Loss: {loss}')
     exit(0)
