@@ -57,3 +57,7 @@ For the next iteration (the V2), I will add other defense framework on the third
 For now I need more safe example to feed it as it seems to be overfitted and only give infected answer. (It is pretty normal as there is onyl one safe example for now.)\
 The results shown in this first try is pretty interresting, so I will go further on after gathering more data.
 
+
+# Problem
+GPT said it is able to run pre trained tensorflow model, but finally it doesn't have the tensorflow module, so I need to use the API instead of a simple prompt.
+I will design a really simple website to handle the communication between my layers models and GPT to produce a human readable answer.
