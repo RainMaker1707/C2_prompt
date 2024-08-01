@@ -51,3 +51,9 @@ For the next iteration (the V2), I will add other defense framework on the third
 # Currently
 - V1 layer 1: ML classifier for infection detection.
 
+
+# Finally
+- I chose to use DL instead of ML for layer1, using padded data as all netflow files does not contains the same amount of packets.
+For now I need more safe example to feed it as it seems to be overfitted and only give infected answer. (It is pretty normal as there is onyl one safe example for now.)\
+The results shown in this first try is pretty interresting, so I will go further on after gathering more data.
+
