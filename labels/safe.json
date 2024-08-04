@@ -1,29 +1,23 @@
 {
     "frameworkName": "safe",
     "data": [
-        {
-            "ID": 0,
-            "filename": "/mnt/data/data/safe/safe_dl.csv",
-            "connectionType": "None",
-            "protocol": "None",
-            "custom": 0,
-            "stager": 0
-        },
-        {
-            "ID": 1,
-            "filename": "/mnt/data/data/safe/browse_early_end.csv",
-            "connectionType": "None",
-            "protocol": "None",
-            "custom": 0,
-            "stager": 0
-        },
-        {
-            "ID": 2,
-            "filename": "/mnt/data/data/safe/reload_little_webpage.csv",
-            "connectionType": "None",
-            "protocol": "None",
-            "custom": 0,
-            "stager": 0
-        }
+        {"ID": 0, "filename": "/mnt/data/data/safe/browse6.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 1, "filename": "/mnt/data/data/safe/youtube.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 2, "filename": "/mnt/data/data/safe/windows3.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 3, "filename": "/mnt/data/data/safe/youtube2.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 4, "filename": "/mnt/data/data/safe/browse1.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 5, "filename": "/mnt/data/data/safe/browse2.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 6, "filename": "/mnt/data/data/safe/safe_download.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 7, "filename": "/mnt/data/data/safe/idle2.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 8, "filename": "/mnt/data/data/safe/windows.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 9, "filename": "/mnt/data/data/safe/browse_early_end.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 10, "filename": "/mnt/data/data/safe/browse.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 11, "filename": "/mnt/data/data/safe/idle.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 12, "filename": "/mnt/data/data/safe/safe_dl3.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 13, "filename": "/mnt/data/data/safe/browse5.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 14, "filename": "/mnt/data/data/safe/browse3.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 15, "filename": "/mnt/data/data/safe/safe1.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 16, "filename": "/mnt/data/data/safe/safe_dl.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}, 
+        {"ID": 17, "filename": "/mnt/data/data/safe/reload_little_webpage.csv", "connectionType": "None", "protocol": "None", "custom": 0, "stager": 0}
     ]
 }
