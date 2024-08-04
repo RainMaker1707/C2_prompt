@@ -142,7 +142,7 @@ def config():
     model.add(LSTM(64, return_sequences=False))
     model.add(Dense(32, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
-    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=[balanced_accuracy])
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=["binary_accuracy"])
     return model
 
 
