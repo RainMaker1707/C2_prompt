@@ -8,6 +8,22 @@
             "protocol": "None",
             "custom": 0,
             "stager": 0
+        },
+        {
+            "ID": 1,
+            "filename": "/mnt/data/data/safe/browse_early_end.csv",
+            "connectionType": "None",
+            "protocol": "None",
+            "custom": 0,
+            "stager": 0
+        },
+        {
+            "ID": 2,
+            "filename": "/mnt/data/data/safe/reload_little_webpage.csv",
+            "connectionType": "None",
+            "protocol": "None",
+            "custom": 0,
+            "stager": 0
         }
     ]
 }
