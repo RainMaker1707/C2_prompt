@@ -15,3 +15,5 @@ Also use the number of requests for each protocol to determine the infection pat
 For this you must count for each protocol the number of requests for each sequences.
 A sequences has the same tuple (Source, Destination) or (Destination, Source).
 For exemple if a packet rely to (Source=10.101.10.10, Destination=8.8.8.8) and another rely to (Source 8.8.8.8, Destination=10.101.10.10), they are part of the same sequence.
+
+You have to compare sequences patterns between infected example and safe example to determine if the file provided by the user seems infected or not.

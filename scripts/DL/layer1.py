@@ -106,11 +106,6 @@ def labelize_data(data, labels):
     return x, y
 
 
-def split_data(x, y):
-    x_train, y_train, x_test, y_test = [], [], [], []
-    return x_train, y_train, x_test, y_test
-
-
 def preprocess(args):
     data = load_data(args.path)
     for key in data.keys():
@@ -181,3 +176,32 @@ if __name__ == "__main__":
     model.save(args.output)
     
     exit(0)
+
+
+    # TODO: retrain leaving out features one by one (or several in one time)
+    # Read more litteratures on network traffic fingerprinting (deep learning)
+    # here it doesn't use netflow, sequence etc, so it need improvement
+    # read gykow files paper
+    # start from state of the art instead of zero
+    # Make a document of a fictionnal c2 framework, with complically logical way to detect
+    """"
+        - Ask LLM to detect this simple c2
+        - Provide examples on requests used (regex match)
+        - How many HTTP requests and what were the name of the URL
+        
+        - The fictionnal C2 will need to be simple, documented (1 page)
+            - how to detect it
+            - how it works
+            - provide regular expression that make it simple to detect
+            - explain how request works, parameters etc
+        - easy to detect
+        - proof of concept
+        - only give this documentation
+        - Analyse traffic
+        - Make it really small and then extend it to sliver (and other C2)
+        -> if that doesn't work: problem on prompt / language / instructions
+        -> if that work: go on with sliver
+    """
+    # If a prompt is a combination of smaller prompt and LLM is unable to perform
+    # One subtask (or more) in probably unefficient to solve the problem
+    # Persit in prompt
