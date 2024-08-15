@@ -1,63 +1,28 @@
-# C2_prompt
-This repository contains documents, scripts and textual prompt to make a GPT4 prompt able to detect C2 frameworks infection and provide appropriate defense rules against this threat
+# Detect and Defence (D2) Framework
+### Introduction
+It is designed to detect Command and Control (C2) frameworks infection from prompt engineering on chatGPT4.\
+This framework aims to give a simple interactive tool where users can send extracted CSV file from wireshark PCAP file.\
+It uses several prompt engineering techniques as few-shot prompting, self-consitency and so on.
+The prompt is fully available [here](https://github.com/RainMaker1707/blob/main/prompt/prompt.md)
 
+### Extractor
+The extractor used to have the CSV file at the right format is available [here](https://github.com/RainMaker1707/C2_prompt/blob/main/data/extractor.py).\
+*TODO write an extractor or modify the actual extractor to simplify user extraction*
 
-It is a current work that can be updated any time. This README will provide information about the state of the project.\
-Versions will be labelled in github to keep traces of the different versions and compare results difference.
+### How it works
+### Usage
+There is two ways to use the D2 framework.
+- Use the customized chatGPT available [here](https://chatgpt.com/)
+- You can create you own prompt following the steps explained in the section [Installation](#installation)
 
-The precedent version of this README was more a Trello that will be soon available here too.\
-To keep the README simple only explanations on versions and how it works will be here.\
-The old README is still available in this repository `oldREADME.md`.
+Once you are in the prompt, just send the CSV file with the appropriate columns and let the LLM works for you.
 
-Feel free to open an issue or contact me in GitHub for more informations.
+### Installation
+*TODO*
 
+### Advancements
+For now the D2 frameworks is able to detect HTTP sessions and beacons of Sliver C2 framework using default configuration.
 
-
-
-# V0
-- No analyze explanation
-- Give good results on example data (several HTTP sessions) and test data (one HTTP session)
-- No help menu
-
-This first usable version uses `Custom GPT4 assistant` and is available [here](https://chatgpt.com/g/g-LXj2lXggp-d2-a-c2-framework-detector).\
-This assistant uses verbosity features that can be specified with V= in your first message.\
-It uses also an FSM like described in `prompt/tasks/FSM.md`.\
-
-As there is no analyze specified the LLM choose the most appropriate on its own to compute the result. This will be corrected soon.\
-Verbosity value may be ignored by the LLM, I don't know why for now.
-
-This version as been tested on HTTP session and it is the first version that detect an infection in not seen data.\
-This version seems to provide good results and consistency on Sliver HTTP session detection.
-
-
-# V1 
-The next version will use 4 layers.
-1. **Machine Learning classifier:** Detect if the file represent safe or infected device.
-2. **Machine Learning classifier:** Detect the protocol used in case of infection.
-3. **Machine Learning classifier:** Provide efficient rulesto protect against the threat detected.
-4. **ChatGPT 4 answers:** Provide a human readable answer where it say the infection result and if needed the appropriate defense rules.
-
-For now I will work on the point 1, and eventually make a release where there will be only 2 layer (1 and 4).\
-This will be the v0.2.0-alpha.
-
-When this is working, I will make the layer 2 and add it in the release v0.2.1-alpha.
-
-Finally I will make the layer 3 that create defense rules for ONE framework as yara or snort (to define at the moment).
-Then the final release of this part will be the v1.0.0-prod
-
-For the next iteration (the V2), I will add other defense framework on the third layer to extend the defense possibility of this tools.
-
-
-# Currently
-- V1 layer 1: ML classifier for infection detection.
-
-
-# Finally
-- I chose to use DL instead of ML for layer1, using padded data as all netflow files does not contains the same amount of packets.
-For now I need more safe example to feed it as it seems to be overfitted and only give infected answer. (It is pretty normal as there is onyl one safe example for now.)\
-The results shown in this first try is pretty interresting, so I will go further on after gathering more data.
-
-
-# Problem
-GPT said it is able to run pre trained tensorflow model, but finally it doesn't have the tensorflow module, so I need to use the API instead of a simple prompt.
-I will design a really simple website to handle the communication between my layers models and GPT to produce a human readable answer.
+### Future works
+- Work on a fictional C2 framework (Simple) to check if the prompt is able to work only with small documentation files.
+- Work on secure communication (as HTTPS, mTLS, etc.).
