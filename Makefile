@@ -2,7 +2,7 @@
 T = $(PWD)
 
 data: clean
-	@(cd converted-data/csv/ && zip -r $(T)/zip/data.zip *)
+	@(cd data/csv/ && zip -r $(T)/zip/data.zip *)
 	@(cd labels && zip -r $(T)/zip/labels.zip *.json)
 	@(cd prompt/tasks && zip -r $(T)/zip/tasks.zip *.md)
 
