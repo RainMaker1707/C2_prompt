@@ -10,7 +10,7 @@ You must also separate these counters by flux.
 For each HTTP request you will store the URL triggered it in a set of all triggered URLs.
 URL can be only  composed of the part /params?param1=a&param2=234 or /uri1/uri2/uri3 for any number of uri
 
-IF it is not URLs you should not match it
+If it is not URLs you should not match it
 For example if request contains 60.0 or "abcdef" you should not match it. On the other side if the request field contains "/GET/component/script/" or "/uri1/params?a=1&b=2" you should match these one.
 Any part of an URL can be composed of any alphanumeric values except "/" that is used to separated parts.
 
