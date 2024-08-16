@@ -12,7 +12,7 @@ The extractor used to have the CSV file at the right format is available [here](
 ### How it works
 ### Usage
 There is two ways to use the D2 framework.
-- Use the customized chatGPT available [here](https://chatgpt.com/)
+- Use the customized chatGPT available [here](https://chatgpt.com/g/g-LXj2lXggp-d2-a-c2-framework-detector)
 - You can create you own prompt following the steps explained in the section [Installation](#installation)
 
 Once you are in the prompt, just send the CSV file with the appropriate columns and let the LLM works for you.
