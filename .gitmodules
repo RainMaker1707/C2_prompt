@@ -1,0 +1,3 @@
+[submodule "slimper"]
+	path = slimper
+	url = git@github.com:RainMaker1707/SimpleC2.git
