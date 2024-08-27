@@ -1,2 +1,6 @@
 *.zip
 script.py
+
+data/raw/sessions/test.pcap
+
+after.md
