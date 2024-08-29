@@ -100,8 +100,15 @@ if __name__ == "__main__":
     from time import sleep
     parser = ArgumentParser()
     parser.add_argument("-t", "--test", action='store_true')
+    parser.add_argument("-d", "--dir", type=str)
+    
 
     args = parser.parse_args()
     if args.test: 
         test = True
-    loop()
+    if args.dir:
+        if args.dir[-1] != "/":
+            args.dir += "/"
+        process(path_to_raw+args.dir)
+    else:
+        loop()
