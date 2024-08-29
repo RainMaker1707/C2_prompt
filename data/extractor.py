@@ -24,6 +24,7 @@ def extract(path):
             "source_port": 0,
             "destination_port": 0,
             "request_method": None,
+            "response_code": None,
             "request_uri": None,
             "data": None,
             "user_agent": None,
@@ -62,7 +63,15 @@ def extract(path):
             feature["request_method"] = packet.http.request_method if hasattr(packet.http, 'request_method') else None
             feature["request_uri"] = packet.http.request_uri if hasattr(packet.http, 'request_uri') else None
             feature["user_agent"] = packet.http.user_agent if hasattr(packet.http, 'user_agent') else None
-        if hasattr(packet, 'https'):
+            # The following line don't work correct it to get the data content in UTF8
+            feature["response_code"] = packet.http.response_code if hasattr(packet.http, "response_code") else None
+            feature["response_phrase"] = packet.http.response_phrase if hasattr(packet.http, "response_type") else None
+            feature["content_type"] = packet.http.content_type if hasattr(packet.http, "content_type") else None
+            feature["content_length"] = int(packet.http.content_length) if hasattr(packet.http, "content_length") else None
+            if feature["content_length"] is None or feature["content_length"] < 1000:
+                feature["data"] = packet.http.file_data.replace("\n", "").replace("+", "") if hasattr(packet.http, "file_data") else None
+
+        if hasattr(packet, 'tcp') and (packet.tcp.srcport == "443" or packet.tcp.dstport == "443"):
             feature["protocol"] = "HTTPS"
         features.append(feature)
         if test and counter > 1100: break
@@ -80,12 +89,12 @@ def process(path):
 
 
 def loop():
-    for dir in listdir(path_to_raw):
-        if dir == "safe":
-            process(path_to_raw+dir)
+    for dr in listdir(path_to_raw):
+        if dr == "safe":
+            process(path_to_raw+dr)
         else:
-            for subdir in listdir(path_to_raw+dir+"/"):
-                process(path_to_raw+dir+"/"+subdir)
+            for subdir in listdir(path_to_raw+dr+"/"):
+                process(path_to_raw+dr+"/"+subdir)
 
 if __name__ == "__main__":
     from time import sleep
