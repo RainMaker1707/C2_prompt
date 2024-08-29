@@ -107,7 +107,7 @@ Here are some URIs examples that are possible in the previous configuration:
 
 The URIs are limited by the extension that is used.
 These formats represent which dictionary should be used depending on the extension:
-<!-- rephrase -->
+
 - `/{poll_paths}/{poll_files}.js` (GET method)
     - Examples:
         - `/assets/bootstrap.min.js` is a correct example
@@ -136,7 +136,7 @@ If the HTTP response contains a command, the implant executes the command and re
 
 If the `kill` command is sent by the operator, the C2 server sends it in an HTTP response to the implant. The implant answers with an HTTP request with GET method using the `.png` extension. The implant then waits for the HTTP response from the C2 server and eventually kills its processes.
 The communication between the C2 server and the implant stops from the HTTP response of the `.png` GET request.
-<!-- rephrase -->
+
 
 ### Executions examples
 
