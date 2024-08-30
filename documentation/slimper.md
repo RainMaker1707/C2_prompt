@@ -124,7 +124,14 @@ These formats represent which dictionary should be used depending on the extensi
         - `/icons/favicon.png` is a correct example
         - `/api/login.png` is an incorrect example
 
-## Behaviour
+### Heartbeats
+Heartbeats are periodical signals send to significate its availability.
+In Slimper the implants sends these heartbeats to significate to the C2 server that it is running and fully available.\
+When the C2 server receives an heartbeat, the C2 operator is able to send command to the implants in the HTTP response associated to an heartbeat.
+The heartbeats are by default send with an interval randomly oscillating between 30 seconds to 1 minute.\
+Heartbeats will use the extension `.js`only and then use the associated dictionaries to build the URIs send in the HTTP requests.
+
+## Behavior
 Once the implant is running on the victim's machine, it starts sending HTTP requests to the C2 server with the GET method using the `.js` extension to mimic a heartbeat.
 
 Upon receiving the first heartbeat, the C2 server knows that an implant is available, so it can start responding to the implant with commands.
